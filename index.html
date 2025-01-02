@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+    <title>Indstndrd</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Sintony", serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .sintony-regular {
+        font-family: "Sintony", serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .sintony-bold {
+        font-family: "Sintony", serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+
+        body {
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        .main-message {
+            font-size: 1.1rem; /* Smaller desktop font size */
+            line-height: 1.6;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email-section {
+            margin-top: 2rem;
+        }
+
+        .email-heading {
+            font-size: 0.9rem; /* Smaller desktop font size */
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            max-width: 300px; /* Narrower form width */
+            margin: 0 auto;
+        }
+
+        .email-input {
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: white;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .submit-btn {
+            padding: 0.75rem;
+            background: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .main-message {
+                font-size: 1rem;
+            }
+            
+            .email-heading {
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                width: 150px;
+                margin-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img 
+            src="https://res.cloudinary.com/djmffrvpg/image/upload/v1735855128/indstndrd-particle_iv0ev8.png" 
+            alt="INDSTNRD" 
+            class="logo"
+        >
+        
+        <p class="main-message">
+            Thank you for supporting Project 01: Ore Mi. We're so greateful for your support and excited to share even more in the new year. Cheers to fresh beginnings & a life well lived.
+        </p>
+        
+        <div class="email-section">
+            <h2 class="email-heading">stay updated for what's next.</h2>
+            <!-- Replace YOUR_FORM_ENDPOINT with your actual form handling endpoint -->
+            <form class="email-form" action="https://getform.io/f/brooomoa" method="POST">
+                <input 
+                    type="email" 
+                    name="email" 
+                    class="email-input" 
+                    placeholder="Enter your email"
+                    required
+                >
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
