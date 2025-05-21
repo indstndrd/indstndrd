@@ -104,8 +104,9 @@
 
             .main-message2 a {
                 font-size: 1rem;
-                padding: 5px 25px;
-            }
+                padding: 10px 20px;
+                margin-bottom: 2rem; 
+              }
             
             .email-heading {
                 font-size: 0.9rem;
